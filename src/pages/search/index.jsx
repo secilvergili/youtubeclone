@@ -1,6 +1,6 @@
-import React from 'react'
 
-const Search; = () => {
+
+const Search = () => {
   return (
     <div>Search;</div>
   )
