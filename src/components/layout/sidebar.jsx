@@ -1,7 +1,33 @@
 import { Link } from "react-router-dom";
-import { navItems } from "../../utils/constants";
+import { navItems, collapsedNavItems} from "../../utils/constants";
 
 const Sidebar = () => {
+  // geçici
+  const isCollapsed = true;
+
+  // navbar küçükse
+  if(isCollapsed) {
+    return ( 
+    <aside className="w-20 h-[calc(100vh-56px)] overflow-y-auto sticky top-14">
+      <div className="p-y-3">
+{collapsedNavItems.map((item, key) => ( 
+  
+      <Link
+      to={item.path}
+      key={key}
+      className="flex flex-col items-center justify-center py-4 px-2 mx-2 rounded-lg transition hover:bg-grey"
+      >
+        <span className="text-xl mb-2">{item.icon}</span>
+        <span className="text-[10px] text-center leading-tight">{item.name}</span>
+      </Link>
+      ))}
+
+      </div>
+    </aside>
+    );
+  }
+
+  //navbar büyükse
   return (
     <>
       <div className="w-20 max-sm:hidden"></div>
@@ -29,7 +55,8 @@ const Sidebar = () => {
           ))}
         </div>
       </aside>
-      ;
+
+
     </>
   );
 };
