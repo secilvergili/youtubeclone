@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 import { navItems, collapsedNavItems} from "../../utils/constants";
+import { useSidebar} from "../../context/sidebar-context";
+
 
 const Sidebar = () => {
-  // geçici
-  const isCollapsed = true;
+
+  const { isCollapsed } = useSidebar();
 
   // navbar küçükse
   if(isCollapsed) {
     return ( 
-    <aside className="w-20 h-[calc(100vh-56px)] overflow-y-auto sticky top-14">
+    <aside className="w-20 h-[calc(100vh-56px)] overflow-y-auto sticky top-14 max-sm:hidden">
       <div className="p-y-3">
 {collapsedNavItems.map((item, key) => ( 
   

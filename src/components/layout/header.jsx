@@ -1,16 +1,21 @@
-import React from "react";
+
 import { MdMenu, MdMic, MdApps } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { IoIosVideocam } from "react-icons/io";
 import { FaBell } from "react-icons/fa";
 import { RiAccountCircleLine } from "react-icons/ri";
+import { useSidebar } from "../../context/sidebar-context";
+
+
 
 const Header = () => {
+  const { toggleSidebar } = useSidebar();
+
   return (
     <div className="flex justify-between gap-4 px-4 h-14">
       {/* Logo Sol Header  */}
       <div className="flex items-center gap-[3.75]">
-        <button className="p-2 hover:bg-grey rounded-full transition duration-200">
+        <button onClick={toggleSidebar} className="p-2 hover:bg-grey rounded-full transition duration-200">
           <MdMenu className="text-xl md:text-2xl"/>
         </button>
 
