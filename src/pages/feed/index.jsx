@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import SkeletonLoader from "../../components/loader/skeleton-loader";
-import  api from "../../utils/api";
+import  api from "../../utils/api.js";
 import Error from "../../components/error";
 import Shorts from "../../components/shorts";
 
@@ -8,6 +8,7 @@ import Shorts from "../../components/shorts";
 const Feed = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
+  // todo: useState >>> true
   const [loading, setLoading] = useState(true);
 
   // sayfa yüklenince
@@ -23,7 +24,7 @@ const Feed = () => {
 // console.log(data);
 // veriyi kategorize et 
 
-const shortLists = data.filter((item) => item.type === "shorts_listings");
+const shortLists = data.filter((item) => item.type === "shorts_listing");
 const videos = data.filter((item) => item.type === "video");
 
 // console.log(videos);
@@ -33,13 +34,19 @@ const videos = data.filter((item) => item.type === "video");
 if (loading) return <SkeletonLoader />
 
 if (error) return <Error message={error} />
-  return <div className="page">
+  
+console.log(data);
+return (
+    <div className="page">
+    <div className="space-y-8">
     <Shorts data={shortLists[0].data}/>
 
-    <h2>Videolar</h2>
+      <h2>videos</h2>
 
     <Shorts data={shortLists[1].data}/>
+    </div>
   </div>
+  );
 
 };
 
