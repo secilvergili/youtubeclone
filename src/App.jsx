@@ -16,7 +16,7 @@ const App = () => {
 
           <main className="flex-1 w-full overflow-y-auto overflow-x-hidden">
             <Routes>
-              <Route path="/" element={<Feed />} />
+              <Route path="/search?query=javascript" element={<Feed />} />
               <Route path="/watch" element={<Detail />} />
               <Route path="/results" element={<Search />} />
             </Routes>

@@ -16,7 +16,7 @@ const Feed = () => {
     setLoading(true);
 
     api
-    .get("/home")
+    .get("/search?query=javascript")
     .then((res)=> setData(res.data.data))
     .catch((err) => setError(err.message))
     .finally(()=> setLoading(false));
