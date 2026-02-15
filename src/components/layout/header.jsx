@@ -5,6 +5,7 @@ import { IoIosVideocam } from "react-icons/io";
 import { FaBell } from "react-icons/fa";
 import { RiAccountCircleLine } from "react-icons/ri";
 import { useSidebar } from "../../context/sidebar-context";
+import { Link } from "react-router-dom";
 
 
 
@@ -12,23 +13,23 @@ const Header = () => {
   const { toggleSidebar } = useSidebar();
 
   return (
-    <div className="flex justify-between gap-4 px-4 h-14">
-      {/* Logo Sol Header  */}
+    <header className="flex justify-between gap-6md:gap-8 px-4 h-14">
+      {/* Sol: Header Logo */}
       <div className="flex items-center gap-[3.75]">
-        <button onClick={toggleSidebar} className="p-2 hover:bg-grey rounded-full transition duration-200">
+        <button onClick={toggleSidebar} className="p-2 hover:bg-grey rounded-full">
           <MdMenu className="text-xl md:text-2xl"/>
         </button>
 
 
-      <button className="flex items-center gap-1">
+      <Link to="/" className="flex items-center gap-1">
           <img src="/youtube.png" alt="youtube" width={32} />
           <span className="text-xl font-bold tracking-tight max-sm:hidden">YouTube</span>
-      </button>
+      </Link>
       </div>
 
-      {/* Orta Header Arama */}
+      {/* Orta Header Form Arama */}
 
-      <div className="flex-1 max-w-180 mx-4 flex justify-center items-center">
+      <div className="flex-1 max-w-182 mx-4 flex justify-center items-center">
         <form className="flex w-full max-w-160 items-center">
           <div className="flex flex-1">
             <input type="text" className="w-full h-10 px-4 bg-[#121212] border border-grey rounded-l-full text-white placeholder:text-[#aaaaaa] focus-border-[#1c62b9] outline-none"
@@ -44,7 +45,7 @@ const Header = () => {
         </form>
       </div>
 
-      {/*Sol: Icons*/}
+      {/*Sağ: Icons*/}
       <div className="flex items-center gap-2">
         <button className="icon max-sm:hidden">
           <IoIosVideocam className="text-xl"/>
@@ -60,7 +61,7 @@ const Header = () => {
         <RiAccountCircleLine className="text-xl"/>
         </button>
       </div>
-    </div>
+    </header>
   );
 };
 

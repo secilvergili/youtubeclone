@@ -1,18 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
 
 
 /* Tailwindcss değişken tanımlama (css root yerine)*/
 @theme {
+ /* Varsayılan font değiştirme*/
+ --font-sans: "Roboto", sans-serif;
 /* Kendi renk tonlarımı belirleme*/
 --color-black: #0f0f0f;
 --color-white: #ffffff;
 --color-grey: #3f3f3f;
+--color-dark: #272727;
 }
 
 /* JSX elementlerine varsayılan stiller verelim.*/
 @layer base {
-button {
-@apply cursor-pointer;
+button, a {
+@apply cursor-pointer transition duration-300;
 }
 body {
 @apply bg-black text-white;
@@ -22,7 +27,7 @@ body {
 /* Kendi oluşturduğımız class larımızı tailwindcss ile stillendirelim.*/
 @layer components {
 .icon {
-@apply p-2 hover:bg-zinc-700 transition rounded-full;
+@apply p-2 hover:bg-zinc-700 transition rounded-full text-xl;
 }
 
 .page{
