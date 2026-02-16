@@ -3,6 +3,7 @@ import Sidebar from "./components/layout/sidebar";
 import Feed from "./pages/feed";
 import Detail from "./pages/detail";
 import Search from "./pages/search";
+import Category from "./pages/category";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -16,8 +17,9 @@ const App = () => {
 
           <main className="flex-1 w-full overflow-y-auto overflow-x-hidden">
             <Routes>
-              <Route path="/search?query=javascript" element={<Feed />} />
+              <Route path="/" element={<Feed />} />
               <Route path="/watch" element={<Detail />} />
+              <Route path="/category/:category" element={<Category />} />
               <Route path="/results" element={<Search />} />
             </Routes>
           </main>

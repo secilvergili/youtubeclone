@@ -21,6 +21,7 @@
 - Nasıl oluştururuz?
 - Proje nin Ana dosya dizininde bir `.env` dosyası oluşturulur.
 - `VITE_DEGISKEN_ISMI=degıskenindegeri` ifadesiyle .env değişkenlerine erişebiliriz.
+- Proje içerisinde env de tutulan bir değişkene erişmek için `import.meta.env.DEGISKEN_ISMI`
 - .env klasörünü .gitignore klasörüne ekleyerek github a gönderilmesini engelleriz.
 - Daha sonra github üzerinden projeyi indirip başlatacak olan kişilere yardımcı olma amacıyla .env.example dosyası oluşturulup hangi değişkenlerin tanımlanması gerektiğini belirtebiliriz.
 - .env.example dosyası oluşturularak dosyayı indirmek isteyenlere değişken için bilgi verilir.

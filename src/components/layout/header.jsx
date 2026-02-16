@@ -4,13 +4,14 @@ import { CiSearch } from "react-icons/ci";
 import { IoIosVideocam } from "react-icons/io";
 import { FaBell } from "react-icons/fa";
 import { RiAccountCircleLine } from "react-icons/ri";
-import { useSidebar } from "../../context/sidebar-context";
+import  { useContext }from "react"
 import { Link } from "react-router-dom";
+import { SidebarContext} from "../../context/sidebar-context";
 
 
 
 const Header = () => {
-  const { toggleSidebar } = useSidebar();
+  const { toggleSidebar } = useContext(SidebarContext);
 
   return (
     <header className="flex justify-between gap-6md:gap-8 px-4 h-14">

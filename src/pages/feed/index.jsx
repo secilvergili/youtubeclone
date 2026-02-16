@@ -1,53 +1,13 @@
-import { useEffect, useState } from "react";
-import SkeletonLoader from "../../components/loader/skeleton-loader";
-import  api from "../../utils/api.js";
-import Error from "../../components/error";
-import Shorts from "../../components/shorts";
-
-
 const Feed = () => {
-  const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
-  // todo: useState >>> true
-  const [loading, setLoading] = useState(true);
 
-  // sayfa yüklenince
-  useEffect(()=>{
-    setLoading(true);
-
-    api
-    .get("/search?query=javascript")
-    .then((res)=> setData(res.data.data))
-    .catch((err) => setError(err.message))
-    .finally(()=> setLoading(false));
-},[]);
-// console.log(data);
-// veriyi kategorize et 
-
-const shortLists = data.filter((item) => item.type === "shorts_listing");
-const videos = data.filter((item) => item.type === "video");
-
-// console.log(videos);
-// console.log(shortsLists);
-
-// console.log(shortLists);
-if (loading) return <SkeletonLoader />
-
-if (error) return <Error message={error} />
-  
-console.log(data);
-return (
-    <div className="page">
-    <div className="space-y-8">
-    <Shorts data={shortLists[0].data}/>
-
-      <h2>videos</h2>
-
-    <Shorts data={shortLists[1].data}/>
+  return (
+    <div className="p-10">
+      <div className="border border-zinc-700 max-w-175 p-3 text-center mx-auto bg-dark rounded-lg">
+      <h1 className="text-3xl">Başlamak için arama yapın</h1>
+      <p className="mt-3 text-zinc-400">İlginizi çekebilecek içeriklerle dolu bir akış oluşturabilmemiz için video izlemeye başlayın.</p>
     </div>
-  </div>
+    </div>
   );
-
 };
 
 export default Feed;

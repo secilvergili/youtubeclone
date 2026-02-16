@@ -1,8 +1,10 @@
 
 
-const Error = () => {
+const Error = ({message}) => {
   return (
-    <div>Error</div>
+    <div>
+      <p>{message}</p>
+    </div>
   )
 }
 

@@ -31,7 +31,39 @@ body {
 }
 
 .page{
- @apply h-[calc(100vh-56px)] w-full flex-1 py-6 px-4;
+ @apply h-[100vh-56px] w-full flex-1 py-6 px-4;
 }
 
+}
+
+/*Scrollbar*/
+*::-webkit-scrollbar {
+ background: #0f0f0f;
+ width: 7px;
+ height: 7px;
+}
+
+*::-webkit-scrollbar {
+ background: #3f3f3f;
+ width: 5px;
+ cursor: pointer;
+}
+
+*::-webkit-scrollbar {
+ background: #5b5b5b;
+}
+
+/* Animasyon */
+@keyframes move {
+ from {
+  left: -500px;
+
+ }
+ to {
+  left: 0;
+ }
+}
+
+.slide-in {
+ animation: move 400ms ease;
 }

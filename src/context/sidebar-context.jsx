@@ -5,13 +5,20 @@ export const SidebarContext = createContext();
 
 // sağlayıcı component i tanımlama (hoc)
 export const SidebarProvider = ({ children }) => {
- const [isCollapsed, setIsCollapsed] = useState(false);
+ // navbar kapalı mı state i
+ const [isCollapsed, setIsCollapsed] = useState(true);
 
+ // navbar aç/kapa yapan fonksiyon
  const toggleSidebar = () => {
   setIsCollapsed(!isCollapsed);
  };
-
- return <SidebarContext.Provider value={{ isCollapsed, toggleSidebar }}>{children}</SidebarContext.Provider>
+// component lara sağlanacak verileri tanımla
+ return (<SidebarContext.Provider
+  value={{ isCollapsed, toggleSidebar }}
+  >
+   {children}
+   </SidebarContext.Provider>
+ );
 };
 
 // custom hook: kendi hook umuzu yazma
