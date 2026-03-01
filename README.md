@@ -4,14 +4,8 @@
 A responsive YouTube-inspired web application built with React, React Router, and RapidAPI.
 
 🚀 Features
-	•	Dynamic category routing (/category/:category)
-	•	API-based video fetching
-	•	Loading & error state handling
-	•	Shorts horizontal scroll section
-	•	Video cards with hover preview
-	•	Responsive grid layout
-	•	View count formatting with millify
-
+	•	Dynamic category routing (/category/:category)!
+	[youtubeclone](https://github.com/user-attachments/assets/61c60bb9-b2a6-4731-88d5-09fca76c2595)
 🛠 Tech Stack
 	•	React
 	•	React Router DOM
