@@ -20,24 +20,24 @@ export const navItems = [
   {
     title: null,
     items: [
-      { icon: <AiFillHome />, name: "Ana Sayfa", path: "/" },
+      { icon: <AiFillHome />, name: "Anasayfa", path: "/" },
       { icon: <BsLightningCharge />, name: "Shorts", path: "/" },
       { icon: <BiSolidVideos />, name: "Abonelikler", path: "/" },
     ],
   },
   {
-    title: "Siz",
+    title: "You",
     items: [
       { icon: <MdHistory />, name: "Geçmiş", path: "/" },
-      { icon: <RiPlayListLine />, name: "Oynatma listeleri", path: "/" },
+      { icon: <RiPlayListLine />, name: "Oynatma Listeleri", path: "/" },
       { icon: <MdWatchLater />, name: "Daha sonra izle", path: "/" },
       { icon: <FaThumbsUp />, name: "Beğendiğim videolar", path: "/" },
     ],
   },
   {
-    title: "Keşfet",
+    title: "Discovery",
     items: [
-      { icon: <MdOutlineWhatshot />, name: "Trendler", path: "/category/trendler" },
+      { icon: <MdOutlineWhatshot />, name: "Trenler", path: "/category/trendler" },
       { icon: <FaMusic />, name: "Müzik", path: "/category/müzik" },
       { icon: <PiRadioButtonBold />, name: "Canlı", path: "/category/canlı" },
       { icon: <MdOutlineSportsEsports />, name: "Oyun", path: "/category/oyun" },
@@ -45,7 +45,7 @@ export const navItems = [
     ],
   },
   {
-    title: "YouTube'dan daha fazla",
+    title: "More",
     items: [
       { icon: <BiSolidVideos className="text-red-500" />, name: "YouTube Premium", path: "/" },
       { icon: <FaMusic className="text-red-500" />, name: "YouTube Music", path: "/" },
@@ -56,7 +56,7 @@ export const navItems = [
     title: null,
     items: [
       { icon: <MdOutlineSettings />, name: "Ayarlar", path: "/" },
-      { icon: <MdOutlineFlag />, name: "İçerik bildirme geç...", path: "/" },
+      { icon: <MdOutlineFlag />, name: "İçerik bildirime geç...", path: "/" },
       { icon: <MdHelpOutline />, name: "Yardım", path: "/" },
       { icon: <MdOutlineFeedback />, name: "Geri bildirim gönder", path: "/" },
     ],
@@ -64,7 +64,7 @@ export const navItems = [
 ];
 
 export const collapsedNavItems = [
-  { icon: <AiFillHome />, name: "Ana Sayfa", path: "/" },
+  { icon: <AiFillHome />, name: "Anasayfa", path: "/" },
   { icon: <BsLightningCharge />, name: "Shorts", path: "/" },
   { icon: <BiSolidVideos />, name: "Abonelikler", path: "/" },
   { icon: <FaRegCircleUser />, name: "Siz", path: "/" },
