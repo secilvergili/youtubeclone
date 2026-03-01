@@ -4,8 +4,7 @@
 A responsive YouTube-inspired web application built with React, React Router, and RapidAPI.
 
 🚀 Features
-	•	Dynamic category routing (/category/:category)!
-	[youtubeclone](https://github.com/user-attachments/assets/61c60bb9-b2a6-4731-88d5-09fca76c2595)
+	•	Dynamic category routing (/category/:category)
 🛠 Tech Stack
 	•	React
 	•	React Router DOM
@@ -28,3 +27,5 @@ npm run dev
 
 Create a .env file:
 VITE_RAPIDAPI_KEY=your_api_key
+
+[youtubeclone](https://github.com/user-attachments/assets/61c60bb9-b2a6-4731-88d5-09fca76c2595)
